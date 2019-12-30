@@ -1,0 +1,109 @@
+{
+    "purpose": "This file contains sample data for a DataFlow Diagram",
+    "systemName": "JoCo",
+    "description": "This is the coolest web site ever.",
+    "notes": "the serverType value defines the color that surrounds the server icon",
+    "servers": [
+      {
+        "name": "WEB05",
+        "serverType": "Web",
+        "serverIcon": "server.png",
+        "details": "https://JoCoGov.org/",
+        "myX": 100,
+        "myY": 100
+      },
+      {
+        "name": "WEB05TWO",
+        "serverType": "Web",
+        "serverIcon": "server2.png",
+        "details": "https://JoCoGov.org/",
+        "myX": 300,
+        "myY": 100
+      },
+      {
+        "name": "WEB05Three",
+        "serverType": "Web",
+        "serverIcon": "server.png",
+        "details": "https://JoCoGov.org/",
+        "myX": 700,
+        "myY": 100
+      },
+      {
+        "name": "FTP01",
+        "serverType": "FTP",
+        "serverIcon": "server.png",
+        "details": "https://JoCoGov.org/",
+        "myX": 875,
+        "myY": 300
+      },
+      {
+        "name": "DBS52",
+        "serverType": "DB",
+        "serverIcon": "server.png",
+        "details": "Web_7",
+        "myX": 100,
+        "myY": 700
+      },
+      {
+        "name": "DBS52TWO",
+        "serverType": "DB",
+        "serverIcon": "server.png",
+        "details": "Web_7",
+        "myX": 400,
+        "myY": 500
+      },
+      {
+        "name": "DBS52THREE",
+        "serverType": "DB",
+        "serverIcon": "server.png",
+        "details": "Web_7",
+        "myX": 800,
+        "myY": 500
+      }
+    ],
+    "connections": [
+      {
+        "name": "MyTest1",
+        "from": "DBS52THREE",
+        "to": "DBS52",
+        "port": "LinkSrv",
+        "lineColor": "pink"
+      },
+      {
+        "name": "DBConn",
+        "from": "WEB05",
+        "to": "DBS52",
+        "port": "3700",
+        "lineColor": "green"
+      },
+      {
+        "name": "DBConnTWO",
+        "from": "WEB05TWO",
+        "to": "DBS52TWO",
+        "port": "3900",
+        "lineColor": "red"
+      },
+      {
+        "name": "DBConnTHREE",
+        "from": "WEB05TWO",
+        "to": "DBS52THREE",
+        "port": "3900",
+        "lineColor": "brown"
+      },
+      {
+        "name": "MyConn",
+        "from": "FTP01",
+        "to": "DBS52TWO",
+        "port": "Backups",
+        "lineColor": "Maroon"
+      },
+      {
+        "name": "Four",
+        "from": "WEB05Three",
+        "to": "DBS52THREE",
+        "port": "3900",
+        "lineColor": "orange"
+      }
+    ]
+  
+  }
