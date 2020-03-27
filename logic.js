@@ -5,9 +5,11 @@ $(function() {
     $.ajax ({
        url: queryURL,
        method: "GET",
-     }).then(function(response){
-        
-        console.log(response[0].Name);
+     }).then(function(data){
+        console.log(data);
+        data.forEach(function(person){
+            console.log(person.Name);
+        })
      })
    
 });
