@@ -8,7 +8,7 @@ $(function() {
      }).then(function(data){
         console.log(data);
         data.forEach(function(person){
-            console.log(person.Name);
+            console.log(person.Name + ' ' + person.Title);
         })
      })
    
