@@ -1,21 +1,24 @@
 $(function() {
 
 const output = document.querySelector('.output');
-const queryURL= "http://mvc.ad.jocoks.com/OrgDataMVC/DirectReports/DEPT/CMO";
+const queryURL= "https://api.myjson.com/bins/19o1hc";
 
 $.ajax ({
   url: queryURL,
   method: "GET",
   }).then(data => {
     console.log(data);
-    data.forEach(person => {  
-      console.log(person.Name + ' ' + person.Title);
-      $("#alertbtn").click (() => {
+
+    data.connections.forEach(info => {
+      console.log(info.name);
+
+      $("#alertbtn").click(function(){
         output.innerHTML += `
-        ${person.Name} ${person.Title}
+        ${info.name}
         <br>
-        `
+        `        
       })
+
     })
   })
 });
