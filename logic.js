@@ -1,6 +1,7 @@
 $(function() {
 
-const output = document.querySelector('.output');
+const outputConnect = document.querySelector('.output-connect');
+const outputSrvrs = document.querySelector('.output-srvrs');
 const queryURL= "https://api.myjson.com/bins/19o1hc";
 
 $.ajax ({
@@ -10,15 +11,25 @@ $.ajax ({
     console.log(data);
 
     data.connections.forEach(info => {
-      console.log(info.name);
+      console.log(info);
 
-      $("#alertbtn").click(function(){
-        output.innerHTML += `
+      $("#btn-connect").click(function(){
+        outputConnect.innerHTML += `
         ${info.name}
         <br>
         `        
       })
+    })
 
+    data.servers.forEach(info => {
+      console.log(info);
+
+      $("#btn-srvrs").click(function(){
+        outputSrvrs.innerHTML += `
+        ${info.name}
+        <br>
+        `        
+      })
     })
   })
 });
