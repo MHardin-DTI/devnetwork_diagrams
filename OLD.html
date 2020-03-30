@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Network Diagram</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col l12 m12 s12">
+          <div class="card-panel teal">
+            <span class="white-text">Details about what this page is for here. <br>
+              
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique, nisi eget mattis rhoncus, sem nisl blandit purus, ut lobortis tellus libero sit amet orci. Nulla facilisi. Sed vitae tellus nec risus tristique molestie ac a nulla. Nunc quis vestibulum arcu. Etiam finibus sagittis dictum. Quisque at lorem vel purus eleifend tempus quis eu libero. Ut bibendum orci neque, ac suscipit magna feugiat sed. Cras consectetur vitae augue quis interdum. In ac nibh id ex congue semper faucibus id magna.<br>
+            </span>
+          </div>
+        </div>
+      </div>
+      <a class='dropdown-trigger btn' id="btn_conn" href='#' data-target='dropdown1'>Connections</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <h5>Connections</h5>
+        <li class="divider" tabindex="-1"></li>
+        <div class="dropdown-content_conn"></div>
+      </ul>
+      <hr>
+
+      <a class='dropdown-trigger btn' id="btn_svrs" href='#' data-target='dropdown2'>Servers</a>
+      <ul id='dropdown2' class='dropdown-content'>
+        <h5>Servers</h5>
+        <li class="divider" tabindex="-1"></li>
+        <div class="dropdown-content_svrs"></div>
+      </ul>
+  
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src ="logic.js"></script>
+
+  </body>
+</html>
