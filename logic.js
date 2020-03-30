@@ -13,7 +13,8 @@ $.ajax ({
     data.connections.forEach(info => {
       console.log(info);
 
-      $("#btn-connect").click(function(){
+      $("#btn-connect").one('click',function(){
+        
         outputConnect.innerHTML += `
         ${info.name}
         <br>
@@ -24,7 +25,7 @@ $.ajax ({
     data.servers.forEach(info => {
       console.log(info);
 
-      $("#btn-srvrs").click(function(){
+      $("#btn-srvrs").one("click",function(){
         outputSrvrs.innerHTML += `
         ${info.name}
         <br>
