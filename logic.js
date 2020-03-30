@@ -22,21 +22,25 @@ $.ajax ({
     data.servers.forEach(info => {
       //console.log(info);
         content_svrs.innerHTML += `
-        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
-        aria-controls="multiCollapseExample1">${info.name}</a>
-        <hr>
 
-        <div class="row">
-        
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-              anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#${info.name}" aria-expanded="true" aria-controls="${info.name}">
+              ${info.name}
+              </button>
+            </h2>
+          </div>
+      
+          <div id="${info.name}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+            ${info.details}
             </div>
           </div>
         </div>
-        `
+      </div>
+      `
       
      
       // })
