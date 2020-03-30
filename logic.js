@@ -1,7 +1,8 @@
 $(function() {
 
-const outputConnect = document.querySelector('.output-connect');
 const outputSrvrs = document.querySelector('.output-srvrs');
+const dropdowncontent_conn = document.querySelector('.dropdown-content_conn');
+const dropdowncontent_svrs = document.querySelector('.dropdown-content_svrs');
 const queryURL= "https://api.myjson.com/bins/19o1hc";
 
 $.ajax ({
@@ -9,27 +10,22 @@ $.ajax ({
   method: "GET",
   }).then(data => {
     console.log(data);
-
     data.connections.forEach(info => {
-      console.log(info);
-
-      $("#btn-connect").one('click',function(){
-        
-        outputConnect.innerHTML += `
-        ${info.name}
-        <br>
-        `        
+      $("#btn_conn").one("click",function(){
+        $('.dropdown-trigger').dropdown();
+        dropdowncontent_conn.innerHTML += `
+          <li><a href="#!">${info.name}</a></li>
+        `      
       })
     })
 
     data.servers.forEach(info => {
-      console.log(info);
-
-      $("#btn-srvrs").one("click",function(){
-        outputSrvrs.innerHTML += `
-        ${info.name}
-        <br>
-        `        
+      //console.log(info);
+      $("#btn_svrs").one("click",function(){
+        $('.dropdown-trigger').dropdown();
+        dropdowncontent_svrs.innerHTML += `
+        <li><a href="#!">${info.name}</a></li>
+      `       
       })
     })
   })

@@ -41,11 +41,20 @@
           </div>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" id="btn-connect">Connections</a>
-      <div class="output-connect"></div>
-      <br>
-      <a class="waves-effect waves-light btn" id="btn-srvrs">Servers</a>
-      <div class="output-srvrs"></div>
+      <a class='dropdown-trigger btn' id="btn_conn" href='#' data-target='dropdown1'>Connections</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <h5>Connections</h5>
+        <li class="divider" tabindex="-1"></li>
+        <div class="dropdown-content_conn"></div>
+      </ul>
+      <hr>
+
+      <a class='dropdown-trigger btn' id="btn_svrs" href='#' data-target='dropdown2'>Servers</a>
+      <ul id='dropdown2' class='dropdown-content'>
+        <h5>Servers</h5>
+        <li class="divider" tabindex="-1"></li>
+        <div class="dropdown-content_svrs"></div>
+      </ul>
   
           <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
